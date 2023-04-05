@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREEZE HOTELS</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid">
+    <div class="container-fluid p-2 bg-primary text-white text-center">
+    <center><h1>BREEZE HOTELS</h1>
+    <p>Book The Need</p></center>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">BREEZE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about/">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/service/">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/gallery/">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/reservation/">Reservations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/order/">Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact/">Contact Us</a>
+        </li>  
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="/logout/">Log Out</a>
+        </li> 
+        <li>
+         <h3 style="color:azure"> Hello , {{user.username}}</h3>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="/login/">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup/">Sign Up</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Hey Buddies!</strong> Please login before Booking Rooms
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src={% static "images/firstapp/1.jpg" %} class="d-block w-100"  alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src={% static "images/firstapp/2.jpg" %} class="d-block w-100" %} alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src={% static "images/firstapp/3.jpg" %} class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <br>
+  <div class="row">
+  <div class="col-md-6">
+  <div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">Best Rates</h4>
+    <p>In Our Hotel we have the rooms with high class infrastructure at cheap and the afforadable prices..</p>
+    <hr>
+    <p class="mb-0">You can book the room as per your needs and enjoy!!!</p>
+</div></div>
+<div class="col-md-6">
+    <div class="alert alert-dark" role="alert">
+    <h4 class="alert-heading">Hotel Guide</h4>
+    <p>A Hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided inside a hotel room range from a modest-quality...</p>
+    <hr>
+    <p class="mb-0">A small room to large suites with bigger ,high quality beds ,a dresser.</p>
+</div></div></div>
+<div class="alert alert-primary" role="alert">
+    <h4 class="alert-heading">Packages</h4>
+    <p>We have the packages that are affordable to the peoples..If they need single room we have seprate floor for single room , Else they need family room there will be seprate floor for that..Based on room Luxury price may be differ..</p>
+    <hr>
+    <p class="mb-0">Based On Need of The People The packages may be differed there are several packages based on user needs</p>
+</div>
+</div>
+</div>
+<div class="container-fluid p-5 bg-dark text-white ">
+    
+    <h3>BREEZE GUIDELINES</h3>
+    <hr>
+    <p>A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided inside a hotel room may range from a modest-quality mattress in a small room to large suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities, upholstered chairs, a flat screen television, and en-suite bathrooms. Small, lower-priced hotels may offer only the most basic guest services and facilities. Larger, higher-priced hotels may provide additional guest facilities such as a swimming pool, business centre (with computers, printers, and other office equipment), childcare, conference and event facilities, tennis or basketball courts, gymnasium, restaurants, day spa, and social function services.</p>
+</div>
+<center>
+<div class="alert alert-warning" role="alert">
+    <h4>All Rights Reserved     <a href="/" class="alert-link">BREEZE HOTELS</a><sup>         TM</sup></h4>
+  </div></center>
+</div>
+{% endblock %}
+</body>
+</html>

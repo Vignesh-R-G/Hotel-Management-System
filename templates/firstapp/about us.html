@@ -1,0 +1,107 @@
+<html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  {% block content %}
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">BREEZE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/about/">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/service/">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/gallery/">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/reservation/">Reservations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/order/">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact/">Contact Us</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="/login/">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup/">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+      <hr>
+<div class="container-fluid">
+      
+  <div class="alert alert-danger" role="alert">
+    <center><h1 style="font-family: covered;">ABOUT US</h1></center>
+  </div>
+    
+    
+    <div class="row">
+    <div class="col-md-4"> 
+    <img src={% static "images/firstapp/22.jpg" %} width="500" height="300">
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-7">
+    <p style="font-size:25px ;">A hotel is an establishment that provides paid lodging on a short-term basis. 
+        Facilities provided inside a hotel room may range from a modest-quality mattress in a small 
+        room to large suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities,
+         upholstered chairs, a flat screen television, and en-suite bathrooms. Small, lower-priced hotels may offer only the most basic guest 
+         services and facilities. Larger, higher-priced hotels may provide additional a guest facilities such as a swimming pool, business 
+         </p>
+    </div> 
+    </div>
+    <p style="font-size:25px ;"> centre, childcare, conference and event facilities, tennis or basketball courts, gymnasium, 
+        restaurants, day spa, and social function services. Hotel rooms are usually numbered to allow guests to identify their room. Some boutique, high-end hotels have custom decorated rooms. Some hotels offer meals as part of a room and board arrangement.
+        In Japan, capsule hotels provide a tiny room suitable only for sleeping and shared bathroom facilities</p>
+   </p>
+   <br>
+  <hr>
+   <div class="row">
+    <div class="col-4">
+   <img src={% static "images/firstapp/23.jpg" %} width="350" height="500">
+   </div>
+    <div class="col-md-7">
+      <div class="alert alert-primary" role="alert">
+        <center><h3>We offer Best Hotel rooms</h3></center>
+      </div>
+        <h1>
+           
+        </h1>
+        <p style="font-size:25px ;" >
+          We provide clean and best rooms ever
+          Whether it's a quick getaway, fabulous dining experiences, or an enthralling day of adventure, we've got you covered. We're ceaselessly 
+          curating new and unique experiences to ensure that we offer you everything your heart desires and more.
+          a hotel room that shares a wall with another hotel room. bedchamber,  bedroom, sleeping accommodation, sleeping room, chamber - a room used primarily for sleeping.
+          In efforts to create an impressive experience for our guests at the best available prices, we are presenting you with exceptional packages that create memories that last a lifetime. </p>
+    </div>
+  </div>
+  <p style="font-size:30px ;" >
+   
+  </p>
+  <center>
+    <div class="alert alert-warning" role="alert">
+        <h4>All Rights Reserved     <a href="/" class="alert-link">BREEZE HOTELS</a><sup>         TM</sup></h4>
+      </div></center>
+</div>  
+{% endblock %}
+</body>
+</html>
